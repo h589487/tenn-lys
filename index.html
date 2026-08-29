@@ -48,7 +48,7 @@
             font-size: .92rem;
         }
 
-        /* Klikkbart område rundt lyset – større treffflate */
+        /* Klikkbart område rundt lyset */
         .candle-area {
             display: inline-block;
             margin: 34px auto 26px;
@@ -81,7 +81,7 @@
             transform: scale(.97);
         }
 
-        /* Veken – den lille tuppen i toppen */
+        /* Veken, den lille tuppen i toppen */
         .wick {
             position: absolute;
             top: 18px;
@@ -94,7 +94,7 @@
             z-index: 2;
         }
 
-        /* Flammen – usynlig når lyset er slukket */
+        /* Flammen er usynlig når lyset er slukket */
         .flame {
             position: absolute;
             top: -14px;
@@ -124,7 +124,6 @@
             background: #ffe7a0;
         }
 
-        /* Tent tilstand – gul farge og glød */
         .candle.tent {
             background: #d6b965;
             border-color: #e2ca7e;
@@ -161,7 +160,7 @@
             line-height: 1;
         }
 
-        /* Nullstill-knapp – ryddig og diskret */
+        /* Nullstill-knapp */
         .reset-btn {
             margin-top: 22px;
             padding: 8px 17px;
@@ -211,7 +210,7 @@
         <h1>Til minne</h1>
         <div class="subtitle">Klikk for å tenne et lys</div>
 
-        <!-- Klikkefeltet – gjør hele området responsivt -->
+        <!-- Klikkefeltet som gjør hele området responsivt -->
         <div class="candle-area" id="candleArea" tabindex="0" role="button" aria-label="Tenn et lys">
             <div class="candle" id="candle">
                 <div class="wick"></div>
@@ -250,7 +249,7 @@
             localStorage.setItem("candleIsLit", String(isLit));
         }
 
-        // Kjernefunksjonen – tenner eller slukker lyset
+        // Kjernefunksjonen som tenner eller slukker lyset
         function lightCandle() {
             if (!isLit) {
                 isLit = true;
@@ -272,7 +271,7 @@
             }
         });
 
-        // Nullstiller telleren – ber om bekreftelse først
+        // Nullstiller telleren og ber om bekreftelse først
         resetBtn.addEventListener("click", function() {
             if (confirm("Nullstill antall tennte lys? Dette kan ikke angres.")) {
                 count = 0;
